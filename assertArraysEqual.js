@@ -20,8 +20,14 @@ const eqArrays = (arr1, arr2) => {
   return true;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+const assertArraysEqual = (arr1, arr2) => {
+  if (eqArrays(arr1, arr2)) {
+    console.log(`✅✅✅ Assertion Passed: [${arr1}] and [${arr2}] are equal.`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: [${arr1}] and [${arr2}] are NOT equal.`);
+  }
+};
 
-assertEqual(eqArrays([1, 2, 3], [1, 2]), true); // => should not PASS
-
-assertEqual(eqArrays([1, 3, 3], [1, 2, 3]), true); // => should not PASS
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
+assertArraysEqual([1, 2], [1, 2, 3]);
+assertArraysEqual([1, 2, 4], [1, 2, 3]);
