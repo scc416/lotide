@@ -21,6 +21,7 @@ const assertArraysEqual = (arr1, arr2) => {
 };
 
 const without = (source, itemsToRemove) => {
+  
   const ifKeep = (val) => {
     for (let item of itemsToRemove) {
       if (val === item) {
