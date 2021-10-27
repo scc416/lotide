@@ -8,14 +8,17 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = (str) => {
   let numOfLetter = {};
-  str = str.toLowerCase();
-  for(let char of str) {
+  // str = str.toLowerCase();
+  for(let char of str.toLowerCase()) {
     if (char !== " ") {
-      if(numOfLetter.hasOwnProperty(char)) {
-        numOfLetter[char] ++;
-      } else {
-        numOfLetter[char] = 1;
-      }
+      numOfLetter.hasOwnProperty(char) 
+      ? numOfLetter[char] ++ 
+      : numOfLetter[char] = 1 ;
+        // if(numOfLetter.hasOwnProperty(char)) {
+        //   numOfLetter[char] ++;
+        // } else {
+        //   numOfLetter[char] = 1;
+        // }
     }
   }
   return numOfLetter;

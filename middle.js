@@ -21,12 +21,14 @@ const assertArraysEqual = (arr1, arr2) => {
 
 const middle = function(array) {
   const length = array.length;
-  if (length <= 2 ) {
-    return [];
-  } else if (length % 2 === 0 ) {
+  if (length <= 2 ) return [];
+  if (length % 2 === 0 ) {
     let index = length / 2;
-    return array.slice(index - 1, index + 1);
-  } else {
+    let middleLeft = array[index - 1];
+    let middleRight = array[index];
+    return [middleLeft, middleRight];
+  } 
+  if (length % 2 === 1 ) {
     let index = Math.floor(length / 2);
     return [ array[index] ];
   }
