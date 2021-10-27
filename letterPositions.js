@@ -22,10 +22,10 @@ const assertArraysEqual = (arr1, arr2) => {
 const letterPositions = function(sentence) {
   const results = {};
   // logic to update results here
-  strInLowerCase = sentence.toLowerCase();
+  let strInLowerCase = sentence.toLowerCase();
   for(let i in strInLowerCase) {
     let prop = strInLowerCase[i];
-    intI = parseInt(i);
+    let intI = parseInt(i);
     if(prop !== " ") {
       results.hasOwnProperty(prop) 
       ? results[prop].push(intI)
