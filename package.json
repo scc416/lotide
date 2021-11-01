@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@siuc/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A clone of the lodash JavaScript library to practice creating various types of functions using JS. ",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/scc416/lotide.git"
   },
-  "author": "",
+  "author": {
+    "name" : "Siu Chan",
+    "email" : "siuc@protonmail.com",
+    "url" : "https://github.com/scc416"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/scc416/lotide/issues"
