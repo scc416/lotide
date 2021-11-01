@@ -35,3 +35,5 @@ assertArraysEqual(results2, [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
 assertArraysEqual(results3, ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"]);
 assertArraysEqual(results4, [1]);
 assertArraysEqual(results5, [1, 2]);
+
+module.exports = takeUntil;

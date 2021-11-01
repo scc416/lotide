@@ -52,3 +52,5 @@ assertArraysEqual(result4.u, [7, 20]);
 assertArraysEqual(result4.s, [8, 21]);
 assertArraysEqual(result4.e, [9, 16, 22]);
 assertArraysEqual(result4.n, [12]);
+
+module.exports = letterPositions;
