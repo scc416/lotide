@@ -1,7 +1,7 @@
 const countLetters = (str) => {
-  let numOfLetter = {};
-  // str = str.toLowerCase();
-  for (const char of str.toLowerCase()) {
+  const numOfLetter = {};
+  const strInLowerCase = str.toLowerCase();
+  for (const char of strInLowerCase) {
     const charIsSpace = char === " ";
     if (!charIsSpace) {
       const charHasDefinedAsKey = char in numOfLetter;
