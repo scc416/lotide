@@ -8,9 +8,7 @@ const assertEqual = function(actual, expected) {
 
 const eqArrays = (arr1, arr2) => {
   // compare length of the arrays
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
+  if (arr1.length !== arr2.length) return false;
   for (let index in arr1) {
     // compare each item in the array
     const val1 = arr1[index];
