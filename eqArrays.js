@@ -1,7 +1,8 @@
 const eqArrays = (arr1, arr2) => {
   // compare length of the arrays
-  if (arr1.length !== arr2.length) return false;
-  for (let index in arr1) {
+  const arrHaveSameLength = arr1.length === arr2.length;
+  if (!arrHaveSameLength) return false;
+  for (const index in arr1) {
     // compare each item in the array
     const val1 = arr1[index];
     const val2 = arr2[index];
