@@ -14,9 +14,9 @@
     "url": "git+https://github.com/scc416/lotide.git"
   },
   "author": {
-    "name" : "Siu Chan",
-    "email" : "siuc@protonmail.com",
-    "url" : "https://github.com/scc416"
+    "name": "Siu Chan",
+    "email": "siuc@protonmail.com",
+    "url": "https://github.com/scc416"
   },
   "license": "ISC",
   "bugs": {
