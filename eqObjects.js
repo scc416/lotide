@@ -1,4 +1,4 @@
-const eqArrays = require("./eqArrays.js")
+const eqArrays = require("./eqArrays.js");
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
