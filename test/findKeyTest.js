@@ -2,15 +2,6 @@ const findKey = require("../findKey.js");
 const chai = require("chai");
 const assert = chai.assert;
 
-const obj = {
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}
-
 describe("#findKey", () => {
   it(`return "noma" for object { "Blue Hill": { stars: 1 }, "Akaleri": { stars: 3 }, "noma": { stars: 2 }, "elBulli":   { stars: 3 }, "Ora": { stars: 2 }, "Akelarre": { stars: 3 } } and function x => x.stars === 2`, () => {
     const inputObj = {
