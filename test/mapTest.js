@@ -1,11 +1,30 @@
-const words = ["ground", "control", "to", "major", "tom"];
+const chai = require("chai");
+const assert = chai.assert;
+const map = require("../map.js");
 
-const results1 = map(words, word => word[0]);
-const results2 = map(words, word => word.length);
-const results3 = map(words, (word) => word + " ");
-console.log(results1);
+describe("#map", () => {
+  it(`return ["g", "c", "t", "m", "t"] for ["ground", "control", "to", "major", "tom"] and (word) => word[0]`, () => {
+    const input = ["ground", "control", "to", "major", "tom"];
+    const callback = word => word[0];
+    const expectedOutput = ["g", "c", "t", "m", "t"];
+    const result = map(input, callback);
+    assert.deepStrictEqual(result, expectedOutput);
+  });
 
-assertArraysEqual(results1, ["g", "c", "t", "m", "t"]);
-assertArraysEqual(results2, [6, 7, 2, 5, 3]);
-assertArraysEqual(results3, 
-  ["ground ", "control ", "to ", "major ", "tom "]);
+  it(`return [6, 7, 2, 5, 3] for ["ground", "control", "to", "major", "tom"] and (word) => word.length`, () => {
+    const input = ["ground", "control", "to", "major", "tom"];
+    const callback = word => word.length;
+    const expectedOutput = [6, 7, 2, 5, 3];
+    const result = map(input, callback);
+    assert.deepStrictEqual(result, expectedOutput);
+  });
+
+  it(`return ["ground ", "control ", "to ", "major ", "tom "] for ["ground", "control", "to", "major", "tom"] and (word) => word + " ")`, () => {
+    const input = ["ground", "control", "to", "major", "tom"];
+    const callback = word => word + " ";
+    const expectedOutput = ["ground ", "control ", "to ", "major ", "tom "];
+    const result = map(input, callback);
+    assert.deepStrictEqual(result, expectedOutput);
+  });
+
+});
