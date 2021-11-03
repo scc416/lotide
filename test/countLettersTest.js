@@ -40,83 +40,64 @@ describe("#countLetters", () => {
 
   it(`return 2 for the value of "o" with input "lighthouse in the house"`, () => {
     const input = "lighthouse in the house";
-    const result = countLetters(input);
-    assert.equal(result.o, 2);
-    const result = countLetters(input).l;
-    const expectedResult = 1;
+    const result = countLetters(input).o;
+    const expectedResult = 2;
     assert.equal(result, expectedResult);
   });
 
   it(`return 2 for the value of "u" with input "lighthouse in the house"`, () => {
     const input = "lighthouse in the house";
-    const result = countLetters(input);
-    assert.equal(result.u, 2);
-    const result = countLetters(input).l;
-    const expectedResult = 1;
+    const result = countLetters(input).u;
+    const expectedResult = 2;
     assert.equal(result, expectedResult);
   });
 
   it(`return 2 for the value of "s" with input "lighthouse in the house"`, () => {
     const input = "lighthouse in the house";
-    const result = countLetters(input);
-    assert.equal(result.s, 2);
-    const result = countLetters(input).l;
-    const expectedResult = 1;
+    const result = countLetters(input).s;
+    const expectedResult = 2;
     assert.equal(result, expectedResult);
   });
 
   it(`return 3 for the value of "e" with input "lighthouse in the house"`, () => {
     const input = "lighthouse in the house";
-    const result = countLetters(input);
-    assert.equal(result.e, 3);
-    const result = countLetters(input).l;
-    const expectedResult = 1;
+    const result = countLetters(input).e;
+    const expectedResult = 3;
     assert.equal(result, expectedResult);
   });
 
   it(`return 1 for the value of "n" with input "lighthouse in the house"`, () => {
     const input = "lighthouse in the house";
-    const result = countLetters(input);
-    assert.equal(result.n, 1);
-    const result = countLetters(input).l;
+    const result = countLetters(input).n;
     const expectedResult = 1;
     assert.equal(result, expectedResult);
   });
 
   it(`return undefined for the value of "a" with input "lighthouse in the house"`, () => {
     const input = "lighthouse in the house";
-    const result = countLetters(input);
-    assert.equal(result.a, undefined);
-    const result = countLetters(input).l;
-    const expectedResult = 1;
+    const result = countLetters(input).a;
+    const expectedResult = undefined;
     assert.equal(result, expectedResult);
   });
 
   it(`return undefined for the value of "b" with input "lighthouse in the house"`, () => {
     const input = "lighthouse in the house";
-    const result = countLetters(input);
-    assert.equal(result.b, undefined);
-    const result = countLetters(input).l;
-    const expectedResult = 1;
+    const result = countLetters(input).b;
+    const expectedResult = undefined;
     assert.equal(result, expectedResult);
   });
 
   it(`return undefined for the value of "c" with input "lighthouse in the house"`, () => {
     const input = "lighthouse in the house";
-    const result = countLetters(input);
-    assert.equal(result.c, undefined);
-    const result = countLetters(input).l;
-    const expectedResult = 1;
+    const result = countLetters(input).c;
+    const expectedResult = undefined;
     assert.equal(result, expectedResult);
   });
 
   it(`return undefined for the value of " " with input "lighthouse in the house"`, () => {
     const input = "lighthouse in the house";
-    const result = countLetters(input);
-    const space = " ";
-    assert.equal(result[space], undefined);
-    const result = countLetters(input).l;
-    const expectedResult = 1;
+    const result = countLetters(input)[" "];
+    const expectedResult = undefined;
     assert.equal(result, expectedResult);
   });
 
@@ -124,9 +105,8 @@ describe("#countLetters", () => {
     const input = "lighthouse in the house";
     const result = countLetters(input);
     const resultKey = Object.keys(result);
-    assert.equal(resultKey.length, 10);
-    const result = countLetters(input).l;
-    const expectedResult = 1;
-    assert.equal(result, expectedResult);
+    const keyLength = resultKey.length;
+    const expectedResult = 10;
+    assert.equal(keyLength, expectedResult);
   });
 });
