@@ -5,7 +5,7 @@ const flatten = (arr) => {
     if (itemIsArray) {
       const flattenItem = flatten(item);
       flattenArr = flattenArr.concat(flattenItem);
-    } 
+    }
     if (!itemIsArray) flattenArr.push(item);
   }
   return flattenArr;
