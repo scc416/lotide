@@ -79,10 +79,32 @@ describe("#letterPositions", () => {
     const result = letterPositions(input).o;
     assert.deepStrictEqual(result, expectedOutput);
   });
-});
 
-// assertArraysEqual(result4.o, [6, 19]);
-// assertArraysEqual(result4.u, [7, 20]);
-// assertArraysEqual(result4.s, [8, 21]);
-// assertArraysEqual(result4.e, [9, 16, 22]);
-// assertArraysEqual(result4.n, [12]);
+  it(`return [7, 20] for value of "u" from input "Lighthouse in the house"`, () => {
+    const input = "Lighthouse in the house";
+    const expectedOutput = [7, 20];
+    const result = letterPositions(input).u;
+    assert.deepStrictEqual(result, expectedOutput);
+  });
+
+  it(`return [8, 21] for value of "s" from input "Lighthouse in the house"`, () => {
+    const input = "Lighthouse in the house";
+    const expectedOutput = [8, 21];
+    const result = letterPositions(input).s;
+    assert.deepStrictEqual(result, expectedOutput);
+  });
+
+  it(`return [9, 16, 22] for value of "e" from input "Lighthouse in the house"`, () => {
+    const input = "Lighthouse in the house";
+    const expectedOutput = [9, 16, 22];
+    const result = letterPositions(input).e;
+    assert.deepStrictEqual(result, expectedOutput);
+  });
+
+  it(`return [12] for value of "s" from input "Lighthouse in the house"`, () => {
+    const input = "Lighthouse in the house";
+    const expectedOutput = [12];
+    const result = letterPositions(input).n;
+    assert.deepStrictEqual(result, expectedOutput);
+  });
+});
