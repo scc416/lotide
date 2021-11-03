@@ -1,7 +1,29 @@
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+const chai = require("chai");
+const assert = chai.assert;
+const without = require("../without.js");
 
-console.log(without([1, 2, 3], [1])); // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
+describe("#without", () => {
+  it("return [2, 3] for [1, 2, 3] and [1]", () => {
+    const source = [1, 2, 3];
+    const itemsToRemove = [1];
+    const expectedOutput = [2, 3];
+    const result = without(source, itemsToRemove);
+    assert.deepStrictEqual(result, expectedOutput);
+  });
+
+  it(`return ["1", "2"] for ["1", "2", "3"] and [1, 2, "3"]`, () => {
+    const source = ["1", "2", "3"];
+    const itemsToRemove = [1, 2, "3"];
+    const expectedOutput = ["1", "2"];
+    const result = without(source, itemsToRemove);
+    assert.deepStrictEqual(result, expectedOutput);
+  });
+
+  it(`return ["hello", "world", "lighthouse"] for ["hello", "world", "lighthouse"] and ["lighthouse"]`, () => {
+    const source = ["hello", "world", "lighthouse"];
+    const itemsToRemove = ["lighthouse"];
+    const expectedOutput = ["hello", "world"];
+    const result = without(source, itemsToRemove);
+    assert.deepStrictEqual(result, expectedOutput);
+  });
+});
