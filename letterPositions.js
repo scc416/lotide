@@ -4,7 +4,7 @@ const letterPositions = function(sentence) {
   const strInLowerCase = sentence.toLowerCase();
   for (const i in strInLowerCase) {
     const key = strInLowerCase[i];
-    const c = parseInt(i);
+    const iAsInt = parseInt(i);
     const keyIsSpace = key === " ";
     if (!keyIsSpace) {
       const resultsHasKey = key in results;
