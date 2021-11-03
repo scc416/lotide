@@ -3,14 +3,15 @@ const middle = function(array) {
   const length = array.length;
   if (length <= 2 ) return [];
   if (length % 2 === 0 ) {
-    let index = length / 2;
-    let middleLeft = array[index - 1];
-    let middleRight = array[index];
+    const index = length / 2;
+    const middleLeft = array[index - 1];
+    const middleRight = array[index];
     return [middleLeft, middleRight];
   } 
   if (length % 2 === 1 ) {
-    let index = Math.floor(length / 2);
-    return [ array[index] ];
+    const index = Math.floor(length / 2);
+    const middle = array[index];
+    return [ middle ];
   }
 }
 
