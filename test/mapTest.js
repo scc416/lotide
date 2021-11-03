@@ -1,7 +1,5 @@
 const words = ["ground", "control", "to", "major", "tom"];
 
-
-
 const results1 = map(words, word => word[0]);
 const results2 = map(words, word => word.length);
 const results3 = map(words, (word) => word + " ");
