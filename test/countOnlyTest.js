@@ -14,11 +14,11 @@ const allItems = [
   "Joe"
 ];
 
-const itemsToCount = { 
-  "Jason": true, 
-  "Karima": true, 
-  "Fang": true, 
-  "Agouhanna": false 
+const itemsToCount = {
+  "Jason": true,
+  "Karima": true,
+  "Fang": true,
+  "Agouhanna": false
 };
 
 describe("#countOnly", () => {
