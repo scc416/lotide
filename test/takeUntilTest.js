@@ -12,18 +12,18 @@ describe("#takeUntil", () => {
     assert.deepStrictEqual(result, expectedOutput);
   });
 
-  it(`return [ "I\'ve", "been", "to", "Hollywood" ] for ["I\'ve", "been", "to", "Hollywood", ",", "I\'ve", "been", "to", "Redwood"] and x => x === ","`, () => {
-    const input = ["I\'ve", "been", "to", "Hollywood", ",", "I\'ve", "been", "to", "Redwood"];
+  it(`return [ "I've", "been", "to", "Hollywood" ] for ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"] and x => x === ","`, () => {
+    const input = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
     const callback = x => x === ",";
-    const expectedOutput = [ "I\'ve", "been", "to", "Hollywood" ];
+    const expectedOutput = [ "I've", "been", "to", "Hollywood" ];
     const result = takeUntil(input, callback);
     assert.deepStrictEqual(result, expectedOutput);
   });
 
-  it(`return ["I\'ve", "been", "to", "Hollywood", ",", "I\'ve", "been", "to", "Redwood"] for ["I\'ve", "been", "to", "Hollywood", ",", "I\'ve", "been", "to", "Redwood"] and x => x === ""`, () => {
-    const input = ["I\'ve", "been", "to", "Hollywood", ",", "I\'ve", "been", "to", "Redwood"];
+  it(`return ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"] for ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"] and x => x === ""`, () => {
+    const input = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
     const callback = x => x === "";
-    const expectedOutput = ["I\'ve", "been", "to", "Hollywood", ",", "I\'ve", "been", "to", "Redwood"];
+    const expectedOutput = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
     const result = takeUntil(input, callback);
     assert.deepStrictEqual(result, expectedOutput);
   });
