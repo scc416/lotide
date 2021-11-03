@@ -1,19 +1,15 @@
 const without = (source, itemsToRemove) => {
-  
-  const ifKeep = (val) => {
-    for (let item of itemsToRemove) {
-      if (val === item) {
-        return false;
-      }
+  const shouldItemBeKept = (val) => {
+    for (const item of itemsToRemove) {
+      const foundInItemsToRemove = val === item;
+      if (foundInItemsToRemove) return false;
     }
     return true;
   }
   let arr = [];
-  for(let item of source) {
-    if (ifKeep(item)) {
-      // arr = [...arr, item];
-      arr.push(item);
-    }
+  for(const item of source) {
+    const shouldKeepItem = shouldItemBeKept(item);
+    if (shouldKeepItem) arr.push(item);
   }
   return arr;
 }
