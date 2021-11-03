@@ -6,7 +6,7 @@ const without = (source, itemsToRemove) => {
     }
     return true;
   }
-  let arr = [];
+  const arr = [];
   for(const item of source) {
     const shouldKeepItem = shouldItemBeKept(item);
     if (shouldKeepItem) arr.push(item);
