@@ -8,9 +8,9 @@ const letterPositions = function(sentence) {
     const keyIsSpace = key === " ";
     if (!keyIsSpace) {
       const resultsHasKey = key in results;
-      resultsHasKey 
-      ? results[key].push(iAsInt)
-      : results[key] = [iAsInt] ;
+      resultsHasKey
+        ? results[key].push(iAsInt)
+        : results[key] = [iAsInt];
     }
   }
   return results;
