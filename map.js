@@ -5,6 +5,6 @@ const map = function(array, callback) {
     results.push(newItem);
   }
   return results;
-}
+};
 
 module.exports = map;
