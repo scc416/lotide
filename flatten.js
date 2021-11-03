@@ -1,32 +1,12 @@
-const eqArrays = (arr1, arr2) => {
-  // compare length of the arrays
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i in arr1) {
-    // compare each item in the array
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = (arr1, arr2) => {
-  if (eqArrays(arr1, arr2)) {
-    return console.log(`✅✅✅ Assertion Passed: [${arr1}] and [${arr2}] are equal.`);
-  } 
-    return console.log(`🛑🛑🛑 Assertion Failed: [${arr1}] and [${arr2}] are NOT equal.`);
-};
-
 const flatten = (arr) => {
   let flattenArr = [];
-  for (let item of arr) {
-    if (Array.isArray(item)) {
-      flattenArr = [...flattenArr, ...item];
-    } else {
-      flattenArr.push(item);
-    }
+  for (const item of arr) {
+    const itemIsArray = Array.isArray(item);
+    if (itemIsArray) {
+      const flattenItem = flatten(item);
+      flattenArr = flattenArr.concat(flattenItem);
+    } 
+    if (!itemIsArray) flattenArr.push(item);
   }
   return flattenArr;
 };
